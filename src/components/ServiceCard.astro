@@ -1,0 +1,16 @@
+---
+const { className, icon, title, description } = Astro.props;
+---
+
+<div class={`${className} item`}>
+    <a href="single-services.html" class="iitem item-style">
+        <div class="iitem-icon">
+            <i class="material-icons material-icons-outlined md-48">{icon}</i>
+        </div>
+        <div class="iitem-icon-bg">
+            <i class="material-icons material-icons-outlined">{icon}</i>
+        </div>
+        <h3 class="iitem-heading item-heading-large">{title}</h3>
+        <div class="iitem-desc">{description}</div>
+    </a>
+</div>

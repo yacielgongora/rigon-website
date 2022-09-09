@@ -1,0 +1,55 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+
+        <title>RIGON Multiservices - IT Soluciones</title>
+
+        <meta name="description" content="Description" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2" />
+
+        <link rel="icon" href="assets/img/logo.png" type="image/x-icon" />
+
+        <link rel="stylesheet" href="assets/css/libs.css" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <link rel="preload" href="/assets/fonts/istok-web-v15-latin/istok-web-v15-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href="/assets/fonts/istok-web-v15-latin/istok-web-v15-latin-700.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href="/assets/fonts/montserrat-v15-latin/montserrat-v15-latin-700.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href="/assets/fonts/montserrat-v15-latin/montserrat-v15-latin-600.woff2" as="font" type="font/woff2" crossorigin />
+
+        <link rel="preload" href="assets/fonts/material-icons/material-icons.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href="assets/fonts/material-icons/material-icons-outlined.woff2" as="font" type="font/woff2" crossorigin />
+    </head>
+    <body>
+        <main class="main">
+            <div class="main-inner">
+                <nav class="mmm">
+                    <div class="mmm-content">
+                        <ul class="mmm-list">
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="about-us.html">Quienes somos</a></li>
+                            <li><a href="services.html">Servicios</a></li>
+                            <li><a href="contact-us.html">Contáctanos</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <Header />
+                <slot />
+                <Footer />
+            </div>
+        </main>
+        <script is:inline src="/assets/libs/jquery/jquery.min.js"></script>
+        <script is:inline src="/assets/libs/lozad/lozad.min.js"></script>
+        <script is:inline src="/assets/libs/device/device.js"></script>
+        <script is:inline src="/assets/libs/ScrollToFixed/jquery-scrolltofixed-min.js"></script>
+        <script is:inline src="/assets/libs/spincrement/jquery.spincrement.min.js"></script>
+        <script is:inline src="/assets/libs/jquery-validation-1.19.3/jquery.validate.min.js"></script>
+        <script is:inline src="/assets/js/custom.js"></script>
+    </body>
+</html>

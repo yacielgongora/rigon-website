@@ -1,0 +1,38 @@
+[
+    {
+        "className": "col-lg-4 col-md-6 col-12 item",
+        "icon": "corporate_fare",
+        "title": "Soluciones empresariales",
+        "description": "Brindamos asesoramiento tecnológico para que automatiza sus procesos y alcance eficiencia en la gestión de sus clientes y servicios."
+    },
+    {
+        "className": "col-lg-4 col-md-6 col-12 item",
+        "icon": "design_services",
+        "title": "Diseño",
+        "description": "Diseños frescos y adaptables que elevarán el número de clientes y permitirán su permanencia en el mercado."
+    },
+    {
+        "className": "col-lg-4 col-md-12 col-12 item",
+        "icon": "code_off",
+        "title": "Desarrolladores",
+        "description": "Con más de 8 años de experiencias en el desarrollo de soluciones informática podrá ahorrar en gastos y tiempo con un equipo local de desarrolladores."
+    },
+    {
+        "className": "col-lg-4 col-md-6 col-12 item",
+        "icon": "corporate_fare",
+        "title": "Soluciones empresariales",
+        "description": "Brindamos asesoramiento tecnológico para que automatiza sus procesos y alcance eficiencia en la gestión de sus clientes y servicios."
+    },
+    {
+        "className": "col-lg-4 col-md-6 col-12 item",
+        "icon": "design_services",
+        "title": "Diseño",
+        "description": "Diseños frescos y adaptables que elevarán el número de clientes y permitirán su permanencia en el mercado."
+    },
+    {
+        "className": "col-lg-4 col-md-12 col-12 item",
+        "icon": "code_off",
+        "title": "Desarrolladores",
+        "description": "Con más de 8 años de experiencias en el desarrollo de soluciones informática podrá ahorrar en gastos y tiempo con un equipo local de desarrolladores."
+    }
+]

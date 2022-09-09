@@ -1,0 +1,20 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ServiceCard from "../components/ServiceCard.astro";
+import services from "../data/services.json";
+---
+
+<Layout title="Services">
+    <div class="section">
+        <div class="container">
+            <div class="row items">
+                <div class="col-12">
+                    <div class="section-heading heading-center">
+                        <h1>Nuestros Servicios</h1>
+                    </div>
+                </div>
+                {services.map((item) => <ServiceCard className={item.className} title={item.title} icon={item.icon} description={item.description} />)}
+            </div>
+        </div>
+    </div>
+</Layout>

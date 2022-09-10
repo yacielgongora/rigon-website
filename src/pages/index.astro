@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ServiceCard from "../components/ServiceCard.astro";
+import services from "../data/services.json";
 ---
 
 <Layout title="Home">
@@ -15,7 +16,9 @@ import ServiceCard from "../components/ServiceCard.astro";
                                 <div class="intro-content">
                                     <div class="section-heading shm-none">
                                         <h2>Rigon Multiservices<br /></h2>
-                                        <p class="section-desc">Somos una empresa con amplio dominio tecnológico, amantes de los desafíos y del desarrollo privado y empresarial...¡¡¡tu mejor asesor tecnológico!!!</p>
+                                        <p class="section-desc">
+                                            Somos una empresa con amplio dominio tecnológico, amantes de los desafíos y del desarrollo privado y empresarial...¡¡¡tu mejor asesor tecnológico!!!
+                                        </p>
                                     </div>
                                     <div class="wrap-btn intro-btns">
                                         <a href="contact-us.html" class="btn btn-with-icon btn-border btn-small ripple">
@@ -41,27 +44,10 @@ import ServiceCard from "../components/ServiceCard.astro";
                             <h2>Nuestros Servicios</h2>
                         </div>
                     </div>
-                    <ServiceCard
-                        className="col-lg-4 col-md-6 col-12 item"
-                        icon="corporate_fare"
-                        title="Soluciones Empresariales"
-                        description="Brindamos asesoramiento tecnológico para que automatices tus procesos y alcances eficiencia en la gestión de sus clientes y servicios."
-                    />
-                    <ServiceCard
-                        className="col-lg-4 col-md-6 col-12 item"
-                        icon="design_services"
-                        title="Diseño"
-                        description="Diseños frescos, adaptables y renovadores que elevarán el número de clientes y permitirán su permanencia en el mercado."
-                    />
-                    <ServiceCard
-                        className="col-lg-4 col-md-12 col-12 item"
-                        icon="code_off"
-                        title="Desarrolladores"
-                        description="Con más de 8 años de experiencias en el desarrollo de soluciones informáticas, ahorrará en gastos y tiempo con un equipo local de desarrolladores especializados."
-                    />
+                    {services.slice(0, 3).map((item) => <ServiceCard className={item.className} title={item.title} icon={item.icon} description={item.description} />)}
                     <div class="col-12">
                         <div class="section-btns justify-content-center">
-                            <a href="services.html" class="btn btn-with-icon btn-w240 ripple">
+                            <a href="/services" class="btn btn-with-icon btn-w240 ripple">
                                 <span>Otros Servicios</span>
                                 <svg class="btn-icon-right" viewBox="0 0 13 9" width="13" height="9"><use xlink:href="assets/img/sprite.svg#arrow-right"></use></svg>
                             </a>

@@ -28,7 +28,7 @@
         "description": "Instalamos y actualizamos todo tipo de Sistemas Operativos con la última tecnología vigente en el mercado."
     },
     {
-        "key": 5,
+        "id": 5,
         "className": "col-lg-4 col-md-6 col-12 item",
         "icon": "videocam",
         "title": "Sistema de Vigilancia CCTV",

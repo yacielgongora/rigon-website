@@ -3,7 +3,7 @@ const { className, icon, title, description, id } = Astro.props;
 ---
 
 <div class={`${className} item`}>
-    <a href={`/services/${id}`} class="iitem item-style">
+    <a href={"/services/" + id} class="iitem item-style">
         <div class="iitem-icon">
             <i class="material-icons material-icons-outlined md-48">{icon}</i>
         </div>

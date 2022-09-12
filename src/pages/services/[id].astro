@@ -4,7 +4,7 @@ import Layout from "../../layouts/Layout.astro";
 export async function getStaticPaths() {
     return services.map((service) => {
         return {
-            params: { id: service.id },
+            params: { id: service.id.toString() },
             props: { service }
         };
     });

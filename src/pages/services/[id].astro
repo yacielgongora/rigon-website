@@ -1,0 +1,36 @@
+---
+import services from "../../data/services.json";
+import Layout from "../../layouts/Layout.astro";
+export async function getStaticPaths() {
+    return services.map((service) => {
+        return {
+            params: { id: service.id },
+            props: { service }
+        };
+    });
+}
+const { id } = Astro.params;
+const { service } = Astro.props;
+---
+
+<Layout title="Service">
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading heading-center">
+                        <h1>{service.title}</h1>
+                    </div>
+                    <div class="content">
+                        <div class="img-style">
+                            <img src="/assets/img/subheader-corporate.png" alt="" />
+                        </div>
+                        <p>
+                            {service.description}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</Layout>

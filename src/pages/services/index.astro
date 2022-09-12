@@ -1,7 +1,7 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import ServiceCard from "../components/ServiceCard.astro";
-import services from "../data/services.json";
+import Layout from "../../layouts/Layout.astro";
+import ServiceCard from "../../components/ServiceCard.astro";
+import services from "../../data/services.json";
 ---
 
 <Layout title="Services">
@@ -13,7 +13,7 @@ import services from "../data/services.json";
                         <h1>Nuestros Servicios</h1>
                     </div>
                 </div>
-                {services.map((item) => <ServiceCard className={item.className} title={item.title} icon={item.icon} description={item.description} />)}
+                {services.map((item) => <ServiceCard id={item.id} className={item.className} title={item.title} icon={item.icon} description={item.description} />)}
             </div>
         </div>
     </div>

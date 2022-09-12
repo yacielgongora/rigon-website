@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ServiceCard from "../components/ServiceCard.astro";
+import ClientCard from "../components/ClientCard.astro";
 import services from "../data/services.json";
 ---
 
@@ -21,7 +22,7 @@ import services from "../data/services.json";
                                         </p>
                                     </div>
                                     <div class="wrap-btn intro-btns">
-                                        <a href="contact-us.html" class="btn btn-with-icon btn-border btn-small ripple">
+                                        <a href="/contact" class="btn btn-with-icon btn-border btn-small ripple">
                                             <span>Contáctanos</span>
                                             <svg class="btn-icon-right" viewBox="0 0 13 9" width="13" height="9"><use xlink:href="assets/img/sprite.svg#arrow-right"></use></svg>
                                         </a>
@@ -44,7 +45,7 @@ import services from "../data/services.json";
                             <h2>Nuestros Servicios</h2>
                         </div>
                     </div>
-                    {services.slice(0, 3).map((item) => <ServiceCard className={item.className} title={item.title} icon={item.icon} description={item.description} />)}
+                    {services.slice(0, 3).map((item) => <ServiceCard id={item.id} className={item.className} title={item.title} icon={item.icon} description={item.description} />)}
                     <div class="col-12">
                         <div class="section-btns justify-content-center">
                             <a href="/services" class="btn btn-with-icon btn-w240 ripple">
@@ -133,6 +134,29 @@ import services from "../data/services.json";
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <div class="row items">
+                    <div class="col-12">
+                        <div class="section-heading heading-center">
+                            <h2>Clientes</h2>
+                            <p class="section-desc">
+                                Nuestros clientes han revolucionado industrias, abierto nuevos mercados y mejorado innumerables vidas. Tenemos el privilegio de trabajar con cientos de empresas con
+                                visión de futuro.
+                            </p>
+                        </div>
+                    </div>
+                    <ClientCard image="assets/img/brands/circle.png" />
+                    <ClientCard image="assets/img/brands/codelab.png" />
+                    <ClientCard image="assets/img/brands/earth.png" />
+                    <ClientCard image="assets/img/brands/hexa.png" />
+                    <ClientCard image="assets/img/brands/lightai.png" />
+                    <ClientCard image="assets/img/brands/nirastate.png" />
+                    <ClientCard image="assets/img/brands/treva.png" />
+                    <ClientCard image="assets/img/brands/zootv.png" />
                 </div>
             </div>
         </section>

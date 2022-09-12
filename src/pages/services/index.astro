@@ -13,7 +13,7 @@ import services from "../../data/services.json";
                         <h1>Nuestros Servicios</h1>
                     </div>
                 </div>
-                {services.map((item) => <ServiceCard id={item.id} className={item.className} title={item.title} icon={item.icon} description={item.description} />)}
+                {services && services.map((item) => <ServiceCard id={item.id} className={item.className} title={item.title} icon={item.icon} description={item.description} />)}
             </div>
         </div>
     </div>

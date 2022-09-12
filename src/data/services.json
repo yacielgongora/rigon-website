@@ -4,7 +4,7 @@
         "className": "col-lg-4 col-md-6 col-12 item",
         "icon": "corporate_fare",
         "title": "Soluciones empresariales",
-        "description": "Brindamos asesoramiento tecnológico para que automatiza sus procesos y alcance eficiencia en la gestión de sus clientes y servicios."
+        "description": "Brindamos asesoramiento tecnológico para que automatices tus procesos y alcances eficiencia en la gestión de tus clientes y servicios."
     },
     {
         "id": 2,
@@ -18,27 +18,45 @@
         "className": "col-lg-4 col-md-12 col-12 item",
         "icon": "code_off",
         "title": "Desarrolladores",
-        "description": "Con más de 8 años de experiencias en el desarrollo de soluciones informática podrá ahorrar en gastos y tiempo con un equipo local de desarrolladores."
+        "description": "Con más de 8 años de experiencias en el desarrollo de soluciones informáticas, te ahorraremos en gastos y tiempo, con un equipo local de desarrolladores."
     },
     {
         "id": 4,
         "className": "col-lg-4 col-md-6 col-12 item",
-        "icon": "corporate_fare",
-        "title": "Soluciones empresariales",
-        "description": "Brindamos asesoramiento tecnológico para que automatiza sus procesos y alcance eficiencia en la gestión de sus clientes y servicios."
+        "icon": "grid_view",
+        "title": "Instalación de Sistemas Operativos",
+        "description": "Instalamos y actualizamos todo tipo de Sistemas Operativos con la última tecnología vigente en el mercado."
     },
     {
         "key": 5,
         "className": "col-lg-4 col-md-6 col-12 item",
-        "icon": "design_services",
-        "title": "Diseño",
-        "description": "Diseños frescos y adaptables que elevarán el número de clientes y permitirán su permanencia en el mercado."
+        "icon": "videocam",
+        "title": "Sistema de Vigilancia CCTV",
+        "description": "Instalamos y configuramos cámaras y sistemas de vigilancia en casas, negocios, oficinas y empresas con los sistemas y tecnologías más innovadores para que estes más seguro."
     },
     {
         "id": 6,
         "className": "col-lg-4 col-md-12 col-12 item",
-        "icon": "code_off",
-        "title": "Desarrolladores",
-        "description": "Con más de 8 años de experiencias en el desarrollo de soluciones informática podrá ahorrar en gastos y tiempo con un equipo local de desarrolladores."
+        "icon": "contact_page",
+        "title": "Cursos y Capacitaciones",
+        "description": "Ofrecemos cursos y capacitaciones, con el objetivo principal de que aprendan y que adquieran habilidades y conocimientos con todo lo relacionado a la programación y edición web."
+    },
+    {
+        "className": "col-lg-4 col-md-6 col-12 item",
+        "icon": "brush",
+        "title": "Diseño Gráfico",
+        "description": "Nos encargamos de transmitir todos tus mensajes e ideas a traves de imágenes y textos. Creación de logos, tarjetas de presentación, post publicitarios, entre otros."
+    },
+    {
+        "className": "col-lg-4 col-md-6 col-12 item",
+        "icon": "view_quilt",
+        "title": "Edición de Videos",
+        "description": "Editamos todos tus videos con la mejor calidad, logrando como resultado final un producto audiovisual terminado y listo para su visualización."
+    },
+    {
+        "className": "col-lg-4 col-md-12 col-12 item",
+        "icon": "groups",
+        "title": "Manejo de Redes",
+        "description": "Contamos con un equipo de profecionales, especializados en el manejo de Redes Sociales, logrando posicionamintos y mayor visualización de las publicaciones."
     }
 ]

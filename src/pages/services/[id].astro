@@ -14,25 +14,6 @@ const { service } = Astro.props;
 ---
 
 <Layout title="Service">
-    <nav class="bread-crumbs">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <ul class="bread-crumbs-list">
-                        <li>
-                            <a href="index.html">Home</a>
-                            <i class="material-icons md-18">chevron_right</i>
-                        </li>
-                        <li>
-                            <a href="services.html">Services</a>
-                            <i class="material-icons md-18">chevron_right</i>
-                        </li>
-                        <li><a href="#!">Corporate Solutions</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </nav>
     <div class="section">
         <div class="container">
             <div class="row">
@@ -42,7 +23,7 @@ const { service } = Astro.props;
                     </div>
                     <div class="content">
                         <div class="img-style">
-                            <img src="/assets/img/subheader-corporate.png" alt="" />
+                            <img src={service.image} alt="" />
                         </div>
                         <p>
                             {service.description}

@@ -4,20 +4,23 @@
         "className": "col-lg-4 col-md-6 col-12 item",
         "icon": "corporate_fare",
         "title": "Soluciones empresariales",
+        "image": "/assets/img/services/subheader-corporate.png",
         "description": "Brindamos asesoramiento tecnológico para que automatices tus procesos y alcances eficiencia en la gestión de tus clientes y servicios."
     },
     {
         "id": "2",
         "className": "col-lg-4 col-md-6 col-12 item",
         "icon": "design_services",
-        "title": "Diseño",
-        "description": "Diseños frescos y adaptables que elevarán el número de clientes y permitirán su permanencia en el mercado."
+        "title": "Análisis y Diseño de software",
+        "image": "/assets/img/services/dev-design.png",
+        "description": "Diseños frescos y adaptables según los requisitos de su negocio, que elevarán el número de clientes y permitirán su permanencia en el mercado."
     },
     {
         "id": "3",
         "className": "col-lg-4 col-md-12 col-12 item",
         "icon": "code_off",
         "title": "Desarrolladores",
+        "image": "/assets/img/services/dev.png",
         "description": "Con más de 8 años de experiencias en el desarrollo de soluciones informáticas, te ahorraremos en gastos y tiempo, con un equipo local de desarrolladores."
     },
     {
@@ -25,6 +28,7 @@
         "className": "col-lg-4 col-md-6 col-12 item",
         "icon": "grid_view",
         "title": "Instalación de Sistemas Operativos",
+        "image": "/assets/img/services/operating-system.png",
         "description": "Instalamos y actualizamos todo tipo de Sistemas Operativos con la última tecnología vigente en el mercado."
     },
     {
@@ -32,6 +36,7 @@
         "className": "col-lg-4 col-md-6 col-12 item",
         "icon": "videocam",
         "title": "Sistema de Vigilancia CCTV",
+        "image": "/assets/img/services/cctv.jpg",
         "description": "Instalamos y configuramos cámaras y sistemas de vigilancia en casas, negocios, oficinas y empresas con los sistemas y tecnologías más innovadores para que estes más seguro."
     },
     {
@@ -39,6 +44,7 @@
         "className": "col-lg-4 col-md-12 col-12 item",
         "icon": "contact_page",
         "title": "Cursos y Capacitaciones",
+        "image": "/assets/img/services/capacitacion.png",
         "description": "Ofrecemos cursos y capacitaciones, con el objetivo principal de que aprendan y que adquieran habilidades y conocimientos con todo lo relacionado a la programación y edición web."
     },
     {
@@ -46,6 +52,7 @@
         "className": "col-lg-4 col-md-6 col-12 item",
         "icon": "brush",
         "title": "Diseño Gráfico",
+        "image": "/assets/img/services/graphic-design.png",
         "description": "Nos encargamos de transmitir todos tus mensajes e ideas a traves de imágenes y textos. Creación de logos, tarjetas de presentación, post publicitarios, entre otros."
     },
     {
@@ -53,6 +60,7 @@
         "className": "col-lg-4 col-md-6 col-12 item",
         "icon": "view_quilt",
         "title": "Edición de Videos",
+        "image": "/assets/img/services/video-edition.jpg",
         "description": "Editamos todos tus videos con la mejor calidad, logrando como resultado final un producto audiovisual terminado y listo para su visualización."
     },
     {
@@ -60,6 +68,15 @@
         "className": "col-lg-4 col-md-12 col-12 item",
         "icon": "groups",
         "title": "Manejo de Redes",
+        "image": "/assets/img/services/social-network.jpg",
         "description": "Contamos con un equipo de profecionales, especializados en el manejo de Redes Sociales, logrando posicionamintos y mayor visualización de las publicaciones."
+    },
+    {
+        "id": "10",
+        "className": "col-lg-4 col-md-6 col-12 item",
+        "icon": "network_check",
+        "title": "Cableado estructurado",
+        "image": "/assets/img/services/network-wire.jpg",
+        "description": "Nuestros especialistas estructurarán el cableado de su local eficientemente y alcanzando las mejores velocidades de inter-conexión."
     }
 ]

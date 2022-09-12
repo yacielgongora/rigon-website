@@ -1,30 +1,55 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import { Seo } from "astro-seo-meta";
 ---
 
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-
-        <title>RIGON Multiservices - IT Soluciones</title>
+        <Seo
+            title="RIGON Multiservices - IT Soluciones"
+            description="RIGON Multiservices - IT Soluciones"
+            icon="/assets/img/logo.png"
+            keywords={["design", "frontend", "technology", "development"]}
+            facebook={{
+                image: "/assets/img/sprite.svg#facebook-icon",
+                url: "https://rigon.onrender.com",
+                type: "website"
+            }}
+            twitter={{
+                image: "/assets/img/sprite.svg#twitter-icon",
+                site: "@rigon-multiservices",
+                card: "summary"
+            }}
+        />
+        <link rel="stylesheet" href="/assets/css/libs.css" /><link rel="stylesheet" href="/assets/css/style.css" /><link
+            rel="preload"
+            href="/assets/fonts/istok-web-v15-latin/istok-web-v15-latin-regular.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+        /><link rel="preload" href="/assets/fonts/istok-web-v15-latin/istok-web-v15-latin-700.woff2" as="font" type="font/woff2" crossorigin /><link
+            rel="preload"
+            href="/assets/fonts/montserrat-v15-latin/montserrat-v15-latin-700.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+        /><link rel="preload" href="/assets/fonts/montserrat-v15-latin/montserrat-v15-latin-600.woff2" as="font" type="font/woff2" crossorigin /><link
+            rel="preload"
+            href="/assets/fonts/material-icons/material-icons.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin
+        /><link rel="preload" href="/assets/fonts/material-icons/material-icons-outlined.woff2" as="font" type="font/woff2" crossorigin />
+    </head>
+    <!-- <title>RIGON Multiservices - IT Soluciones</title>
 
         <meta name="description" content="RIGON Multiservices - IT Soluciones" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2" />
-        <link rel="icon" href="/assets/img/logo.png" type="image/x-icon" />
-
-        <link rel="stylesheet" href="/assets/css/libs.css" />
-        <link rel="stylesheet" href="/assets/css/style.css" />
-        <link rel="preload" href="/assets/fonts/istok-web-v15-latin/istok-web-v15-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
-        <link rel="preload" href="/assets/fonts/istok-web-v15-latin/istok-web-v15-latin-700.woff2" as="font" type="font/woff2" crossorigin />
-        <link rel="preload" href="/assets/fonts/montserrat-v15-latin/montserrat-v15-latin-700.woff2" as="font" type="font/woff2" crossorigin />
-        <link rel="preload" href="/assets/fonts/montserrat-v15-latin/montserrat-v15-latin-600.woff2" as="font" type="font/woff2" crossorigin />
-
-        <link rel="preload" href="/assets/fonts/material-icons/material-icons.woff2" as="font" type="font/woff2" crossorigin />
-        <link rel="preload" href="/assets/fonts/material-icons/material-icons-outlined.woff2" as="font" type="font/woff2" crossorigin />
-    </head>
+        <link rel="icon" href="/assets/img/logo.png" type="image/x-icon" /> -->
     <body>
         <main class="main">
             <div class="main-inner">

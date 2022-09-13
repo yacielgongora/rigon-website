@@ -1,29 +1,37 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import { Seo } from "astro-seo-meta";
 ---
 
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <Seo
-            title="RIGON Multiservices - IT Soluciones"
-            description="RIGON Multiservices - IT Soluciones"
-            icon="/assets/img/logo.png"
-            keywords={["design", "frontend", "technology", "development"]}
-            facebook={{
-                image: "/assets/img/sprite.svg#facebook-icon",
-                url: "https://rigon.onrender.com",
-                type: "website"
-            }}
-            twitter={{
-                image: "/assets/img/sprite.svg#twitter-icon",
-                site: "@rigon-multiservices",
-                card: "summary"
-            }}
-        />
+        <meta name="generator" content="Astro v1.1.7" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/png" href="/assets/img/logo.png" />
+        <title>RIGON Multiservices - IT Soluciones</title>
+        <!-- SEO STARTS -->
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="robots" content="follow, index" />
+        <meta name="apple-mobile-web-app-title" content="RIGON" />
+
+        <meta content="RIGON Multiservices - IT Soluciones" name="description" />
+        <link rel="canonical" href="https://rigon.onrender.com" />
+
+        <meta name="og:site_name" property="og:site_name" content="RIGON" />
+        <meta name="og:type" property="og:type" content="website" />
+        <meta property="og:description" content="RIGON Multiservices - IT Soluciones" />
+        <meta property="og:title" content="RIGON Multiservices - IT Soluciones" />
+        <meta property="og:image" content="/assets/img/logo.png" />
+        <meta property="og:url" content="https://rigon.onrender.com" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="rigon-multiservices" />
+        <meta name="twitter:title" content="Astro | Build faster websites" />
+        <meta name="twitter:description" content="RIGON Multiservices - IT Soluciones" />
+        <meta name="twitter:image" content="/assets/img/sprite.svg#twitter-icon" />
+        <!-- /SEO ENDS-->
         <link rel="stylesheet" href="/assets/css/libs.css" /><link rel="stylesheet" href="/assets/css/style.css" /><link
             rel="preload"
             href="/assets/fonts/istok-web-v15-latin/istok-web-v15-latin-regular.woff2"

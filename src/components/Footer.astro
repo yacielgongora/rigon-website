@@ -1,3 +1,8 @@
+---
+const date = new Date();
+let year = date.getFullYear();
+---
+
 <footer class="footer">
     <div class="footer-main">
         <div class="container">
@@ -98,7 +103,9 @@
                         <ul class="footer-contacts">
                             <li>
                                 <i class="material-icons md-22">location_on</i>
-                                <div class="footer-contact-info">Santo Domingo, Distrito Nacional, R.D. 10205</div>
+                                <a href={import.meta.env.GOOGLE_MAP_ADDRESS}>
+                                    {import.meta.env.ADDRESS}
+                                </a>
                             </li>
                             <li>
                                 <i class="material-icons md-22 footer-contact-tel">smartphone</i>
@@ -131,7 +138,7 @@
                     </nav>
                 </div>
                 <div class="col-md-auto col-12 item">
-                    <div class="copyright">© 2022 RIGON Multiservices. All rights reserved.</div>
+                    <div class="copyright">© {year} RIGON Multiservices. Todos los derechos reservados.</div>
                 </div>
             </div>
         </div>

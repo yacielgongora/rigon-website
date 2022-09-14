@@ -19,11 +19,7 @@ import Layout from "../layouts/Layout.astro";
                             <li>
                                 <i class="material-icons md-22">location_on</i>
                                 <div class="footer-contact-info">
-                                    <a
-                                        href="https://www.google.com/maps/place/Santo+Domingo/@18.4800294,-70.0170921,12z/data=!3m1!4b1!4m5!3m4!1s0x8eaf89f1107ea5ab:0xd6c587b82715c164!8m2!3d18.4860575!4d-69.9312117"
-                                    >
-                                        Santo Domingo, Distrito Nacional, R.D. 10205
-                                    </a>
+                                    <a href={import.meta.env.GOOGLE_MAP_ADDRESS}> Santo Domingo, Distrito Nacional, R.D. 10205</a>
                                 </div>
                             </li>
                             <li>

@@ -1,6 +1,7 @@
 ---
 const date = new Date();
 let year = date.getFullYear();
+import constants from "../../utils/constants";
 ---
 
 <footer class="footer">
@@ -103,8 +104,8 @@ let year = date.getFullYear();
                         <ul class="footer-contacts">
                             <li>
                                 <i class="material-icons md-22">location_on</i>
-                                <a href={import.meta.env.GOOGLE_MAP_ADDRESS}>
-                                    {import.meta.env.ADDRESS}
+                                <a href={constants.GOOGLE_MAP_ADDRESS}>
+                                    {constants.ADDRESS}
                                 </a>
                             </li>
                             <li>

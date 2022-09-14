@@ -1,3 +1,7 @@
+---
+import constants from "../../utils/constants";
+---
+
 <header class="header">
     <!-- Begin header top -->
     <nav class="header-top">
@@ -9,13 +13,13 @@
                         <li>
                             <a href="mailto:rigon@gmail.com">
                                 <i class="material-icons md-18">mail_outline</i>
-                                <span>{import.meta.env.EMAIL}</span>
+                                <span>{constants.EMAIL}</span>
                             </a>
                         </li>
                         <li>
                             <a href="tel:+1 809-893-7641" class="formingHrefTel">
                                 <i class="material-icons md-18">phone_in_talk</i>
-                                <span>{import.meta.env.MOBILE_MAIN}</span>
+                                <span>{constants.MOBILE_MAIN}</span>
                             </a>
                         </li>
                     </ul>

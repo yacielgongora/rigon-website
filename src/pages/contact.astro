@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import constants from "../../utils/constants";
 ---
 
 <Layout title="Contacto">
@@ -19,19 +20,19 @@ import Layout from "../layouts/Layout.astro";
                             <li>
                                 <i class="material-icons md-22">location_on</i>
                                 <div class="footer-contact-info">
-                                    <a href={import.meta.env.GOOGLE_MAP_ADDRESS}> {import.meta.env.ADDRESS}</a>
+                                    <a href={constants.GOOGLE_MAP_ADDRESS}> {constants.ADDRESS}</a>
                                 </div>
                             </li>
                             <li>
                                 <i class="material-icons md-22 footer-contact-tel">smartphone</i>
                                 <div class="footer-contact-info">
-                                    <a href="tel:+1809-893-7641" class="formingHrefTel">{import.meta.env.MOBILE_MAIN}</a>
+                                    <a href="tel:+1809-893-7641" class="formingHrefTel">{constants.MOBILE_MAIN}</a>
                                 </div>
                             </li>
                             <li>
                                 <i class="material-icons md-22 footer-contact-email">email</i>
                                 <div class="footer-contact-info">
-                                    <a href="mailto:rigon@gmail.com">{import.meta.env.EMAIL}</a>
+                                    <a href="mailto:rigon@gmail.com">{constants.EMAIL}</a>
                                 </div>
                             </li>
                         </ul>

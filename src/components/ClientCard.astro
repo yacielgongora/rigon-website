@@ -1,10 +1,10 @@
 ---
-const { className, image } = Astro.props;
+const { alt, image } = Astro.props;
 ---
 
 <div class="col-lg-3 col-md-4 col-sm-4 col-6 item">
     <!-- Begin brands item -->
     <div class="brands-item item-style">
-        <img data-src={image} class="lazy" src="" alt="" />
+        <img data-src={image} class="lazy" src="" alt={alt} />
     </div><!-- End brands item -->
 </div>

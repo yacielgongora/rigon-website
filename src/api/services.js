@@ -14,6 +14,9 @@ export async function get({ params }) {
         status: 200
     });
 }
+export async function getServices() {
+    return services;
+}
 
 export async function getService(id) {
     return services.find((service) => service.id === id);

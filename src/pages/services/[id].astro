@@ -1,13 +1,23 @@
 ---
-import { getService } from "../../api/services";
 import Layout from "../../layouts/Layout.astro";
 import NotFound from "../../components/NotFound.astro";
-const service = await getService(Astro.params.id);
+import { getServices } from "../../api/services";
+export async function getStaticPaths() {
+    const services = await getServices();
+    return services.map((service) => {
+        return {
+            params: { id: service.id },
+            props: { service }
+        };
+    });
+}
+const { id } = Astro.params;
+const { service } = Astro.props;
 ---
 
 <Layout title="Service">
     {
-        service ? (
+        service && (
             <div class="section">
                 <div class="container">
                     <div class="row">
@@ -25,8 +35,6 @@ const service = await getService(Astro.params.id);
                     </div>
                 </div>
             </div>
-        ) : (
-            <NotFound title="El servicio no existe" description="Es posible que se haya eliminado este servicio o no se encuentre activo" />
         )
     }
 </Layout>

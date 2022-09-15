@@ -1,0 +1,31 @@
+---
+const { title, description } = Astro.props;
+---
+
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-heading heading-center">
+                    <div class="section-subheading">{title}</div>
+                    <h1 class="page-title page-404-title">404</h1>
+                    <p class="section-desc">{description}</p>
+                </div>
+                <div class="wrap-btn align-items-center justify-content-center">
+                    <a href="/" class="btn btn-small btn-with-icon ripple">
+                        <span>Inicio</span>
+                        <svg class="btn-icon-right" viewBox="0 0 13 9" width="13" height="9">
+                            <use xlink:href="/assets/img/sprite.svg#arrow-right"></use>
+                        </svg>
+                    </a>
+                    <a href="/contact" class="btn btn-small btn-border btn-with-icon ripple">
+                        <span>Contáctanos</span>
+                        <svg class="btn-icon-right" viewBox="0 0 13 9" width="13" height="9">
+                            <use xlink:href="/assets/img/sprite.svg#arrow-right"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

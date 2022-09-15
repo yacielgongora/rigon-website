@@ -1,36 +1,32 @@
 ---
-import services from "../../data/services.json";
+import { getService } from "../../api/services";
 import Layout from "../../layouts/Layout.astro";
-export async function getStaticPaths() {
-    return services.map((service) => {
-        return {
-            params: { id: service.id },
-            props: { service }
-        };
-    });
-}
-const { id } = Astro.params;
-const { service } = Astro.props;
+import NotFound from "../../components/NotFound.astro";
+const service = await getService(Astro.params.id);
 ---
 
 <Layout title="Service">
-    <div class="section">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-heading heading-center">
-                        <h1>{service.title}</h1>
-                    </div>
-                    <div class="content">
-                        <div class="img-style">
-                            <img src={service.image} alt="" />
+    {
+        service ? (
+            <div class="section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="section-heading heading-center">
+                                <h1>{service.title}</h1>
+                            </div>
+                            <div class="content">
+                                <div class="img-style">
+                                    <img src={service.image} alt="" />
+                                </div>
+                                <p>{service.description}</p>
+                            </div>
                         </div>
-                        <p>
-                            {service.description}
-                        </p>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+        ) : (
+            <NotFound title="El servicio no existe" description="Es posible que se haya eliminado este servicio o no se encuentre activo" />
+        )
+    }
 </Layout>

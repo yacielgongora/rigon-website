@@ -1,5 +1,5 @@
 {
-  "name": "@rigon",
+  "name": "rigon-website",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -10,7 +10,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.3.1"
+    "astro": "^5.0.0"
   },
   "engines": {
     "node": "22.x"

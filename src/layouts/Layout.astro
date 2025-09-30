@@ -3,84 +3,116 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width" />
-        <link rel="icon" type="image/png" href="/assets/img/logo.png" />
-        <title>RIGON Multiservices - IT Soluciones</title>
-        <!-- SEO STARTS -->
-        <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="robots" content="follow, index" />
-        <meta name="apple-mobile-web-app-title" content="RIGON" />
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/png" href="/assets/img/logo.png" />
+    <title>RIGON Multiservices - IT Soluciones</title>
+    <!-- SEO STARTS -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="robots" content="follow, index" />
+    <meta name="apple-mobile-web-app-title" content="RIGON" />
 
-        <meta content="RIGON Multiservices - IT Soluciones" name="description" />
-        <link rel="canonical" href="https://rigon.onrender.com" />
+    <meta content="RIGON Multiservices - IT Soluciones" name="description" />
+    <link rel="canonical" href="https://rigon.onrender.com" />
 
-        <meta name="og:site_name" property="og:site_name" content="RIGON" />
-        <meta name="og:type" property="og:type" content="website" />
-        <meta property="og:description" content="RIGON Multiservices - IT Soluciones" />
-        <meta property="og:title" content="RIGON Multiservices - IT Soluciones" />
-        <meta property="og:image" content="https://rigon.onrender.com/assets/img/logo.png" />
-        <meta property="og:url" content="https://rigon.onrender.com" />
+    <meta name="og:site_name" property="og:site_name" content="RIGON" />
+    <meta name="og:type" property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="RIGON Multiservices - IT Soluciones"
+    />
+    <meta property="og:title" content="RIGON Multiservices - IT Soluciones" />
+    <meta
+      property="og:image"
+      content="https://rigon.onrender.com/assets/img/logo.png"
+    />
+    <meta property="og:url" content="https://rigon.onrender.com" />
 
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="rigon-multiservices" />
-        <meta name="twitter:title" content="Astro | Build faster websites" />
-        <meta name="twitter:description" content="RIGON Multiservices - IT Soluciones" />
-        <meta name="twitter:image" content="https://rigon.onrender.com/assets/img/sprite.svg#twitter-icon" />
-        <!-- /SEO ENDS-->
-        <link rel="stylesheet" href="/assets/css/libs.css" /><link rel="stylesheet" href="/assets/css/style.css" /><link
-            rel="preload"
-            href="/assets/fonts/istok-web-v15-latin/istok-web-v15-latin-regular.woff2"
-            as="font"
-            type="font/woff2"
-            crossorigin
-        /><link rel="preload" href="/assets/fonts/istok-web-v15-latin/istok-web-v15-latin-700.woff2" as="font" type="font/woff2" crossorigin /><link
-            rel="preload"
-            href="/assets/fonts/montserrat-v15-latin/montserrat-v15-latin-700.woff2"
-            as="font"
-            type="font/woff2"
-            crossorigin
-        /><link rel="preload" href="/assets/fonts/montserrat-v15-latin/montserrat-v15-latin-600.woff2" as="font" type="font/woff2" crossorigin /><link
-            rel="preload"
-            href="/assets/fonts/material-icons/material-icons.woff2"
-            as="font"
-            type="font/woff2"
-            crossorigin
-        /><link rel="preload" href="/assets/fonts/material-icons/material-icons-outlined.woff2" as="font" type="font/woff2" crossorigin />
-    </head>
-    <!-- <title>RIGON Multiservices - IT Soluciones</title>
-
-        <meta name="description" content="RIGON Multiservices - IT Soluciones" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2" />
-        <link rel="icon" href="/assets/img/logo.png" type="image/x-icon" /> -->
-    <body>
-        <main class="main">
-            <div class="main-inner">
-                <nav class="mmm">
-                    <div class="mmm-content">
-                        <ul class="mmm-list">
-                            <li><a href="/">Inicio</a></li>
-                            <li><a href="/about">Quiénes somos</a></li>
-                            <li><a href="/services">Servicios</a></li>
-                            <li><a href="/contact">Contáctanos</a></li>
-                        </ul>
-                    </div>
-                </nav>
-                <Header />
-                <slot />
-                <Footer />
-            </div>
-        </main>
-        <script is:inline src="/assets/libs/jquery/jquery.min.js"></script>
-        <script is:inline src="/assets/libs/lozad/lozad.min.js"></script>
-        <script is:inline src="/assets/libs/device/device.js"></script>
-        <script is:inline src="/assets/libs/ScrollToFixed/jquery-scrolltofixed-min.js"></script>
-        <script is:inline src="/assets/libs/spincrement/jquery.spincrement.min.js"></script>
-        <script is:inline src="/assets/libs/jquery-validation-1.19.3/jquery.validate.min.js"></script>
-        <script is:inline src="/assets/js/custom.js"></script>
-    </body>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="rigon-multiservices" />
+    <meta name="twitter:title" content="Astro | Build faster websites" />
+    <meta
+      name="twitter:description"
+      content="RIGON Multiservices - IT Soluciones"
+    />
+    <meta
+      name="twitter:image"
+      content="https://rigon.onrender.com/assets/img/sprite.svg#twitter-icon"
+    />
+    <!-- /SEO ENDS-->
+    <link rel="stylesheet" href="/assets/css/libs.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link
+      rel="preload"
+      href="/assets/fonts/istok-web-v15-latin/istok-web-v15-latin-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    /><link
+      rel="preload"
+      href="/assets/fonts/istok-web-v15-latin/istok-web-v15-latin-700.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    /><link
+      rel="preload"
+      href="/assets/fonts/montserrat-v15-latin/montserrat-v15-latin-700.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    /><link
+      rel="preload"
+      href="/assets/fonts/montserrat-v15-latin/montserrat-v15-latin-600.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    /><link
+      rel="preload"
+      href="/assets/fonts/material-icons/material-icons.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    /><link
+      rel="preload"
+      href="/assets/fonts/material-icons/material-icons-outlined.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+  </head>
+  <body>
+    <main class="main">
+      <div class="main-inner">
+        <nav class="mmm">
+          <div class="mmm-content">
+            <ul class="mmm-list">
+              <li><a href="/">Inicio</a></li>
+              <li><a href="/about">Quiénes somos</a></li>
+              <li><a href="/services">Servicios</a></li>
+              <li><a href="/contact">Contáctanos</a></li>
+            </ul>
+          </div>
+        </nav>
+        <Header />
+        <slot />
+        <Footer />
+      </div>
+    </main>
+    <script is:inline src="/assets/libs/jquery/jquery.min.js"></script>
+    <script is:inline src="/assets/libs/lozad/lozad.min.js"></script>
+    <script is:inline src="/assets/libs/device/device.js"></script>
+    <script
+      is:inline
+      src="/assets/libs/ScrollToFixed/jquery-scrolltofixed-min.js"></script>
+    <script is:inline src="/assets/libs/spincrement/jquery.spincrement.min.js"
+    ></script>
+    <script
+      is:inline
+      src="/assets/libs/jquery-validation-1.19.3/jquery.validate.min.js"
+    ></script>
+    <script is:inline src="/assets/js/custom.js"></script>
+  </body>
 </html>

@@ -1,40 +1,52 @@
 ---
+import { Image } from "astro:assets";
 import Layout from "../../layouts/Layout.astro";
 import NotFound from "../../components/NotFound.astro";
 import { getServices } from "../../api/services";
 export async function getStaticPaths() {
-    const services = await getServices();
-    return services.map((service) => {
-        return {
-            params: { id: service.id },
-            props: { service }
-        };
-    });
+  const services = await getServices();
+  return services.map((service) => {
+    return {
+      params: { id: service.id },
+      props: { service },
+    };
+  });
 }
-const { id } = Astro.params;
 const { service } = Astro.props;
 ---
 
 <Layout title="Service">
-    {
-        service && (
-            <div class="section">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="section-heading heading-center">
-                                <h1>{service.title}</h1>
-                            </div>
-                            <div class="content">
-                                <div class="img-style">
-                                    <img src={service.image} alt="" />
-                                </div>
-                                <p>{service.description}</p>
-                            </div>
-                        </div>
-                    </div>
+  {
+    service ? (
+      <div class="section">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="section-heading heading-center">
+                <h1>{service.title}</h1>
+              </div>
+              <div class="content">
+                <div class="img-style">
+                  <img src={service.image} alt={service.title} loading="lazy" />
                 </div>
+                <div style="display: flex; justify-content: center; margin: 2rem 0;">
+                  <i
+                    class="material-icons material-icons-outlined"
+                    style="font-size: 4rem; color: var(--primary-color);"
+                  >
+                    {service.icon}
+                  </i>
+                </div>
+                <p style="font-size: 1.125rem; line-height: 1.8;">
+                  {service.description}
+                </p>
+              </div>
             </div>
-        )
-    }
+          </div>
+        </div>
+      </div>
+    ) : (
+      <NotFound />
+    )
+  }
 </Layout>

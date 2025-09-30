@@ -1,0 +1,160 @@
+/* View Transitions - Animaciones personalizadas para Rigon */
+
+/* Animación suave para todos los elementos */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in-out;
+}
+
+/* Animación de fade para el contenido general */
+::view-transition-old(root) {
+  animation-name: fadeOut;
+}
+
+::view-transition-new(root) {
+  animation-name: fadeIn;
+  /* Asegurar que el nuevo contenido sea visible */
+  z-index: 2;
+}
+
+/* Animación especial para las imágenes de servicios */
+::view-transition-old(service-image),
+::view-transition-new(service-image) {
+  animation-duration: 0.5s;
+}
+
+::view-transition-old(service-image) {
+  animation-name: scaleDown;
+}
+
+::view-transition-new(service-image) {
+  animation-name: scaleUp;
+}
+
+/* Animación para los títulos de servicios */
+::view-transition-old(service-title),
+::view-transition-new(service-title) {
+  animation-duration: 0.4s;
+}
+
+::view-transition-old(service-title) {
+  animation-name: slideOutUp;
+}
+
+::view-transition-new(service-title) {
+  animation-name: slideInDown;
+}
+
+/* Animación para los iconos de servicios */
+::view-transition-old(service-icon),
+::view-transition-new(service-icon) {
+  animation-duration: 0.6s;
+}
+
+::view-transition-old(service-icon) {
+  animation-name: rotateOut;
+}
+
+::view-transition-new(service-icon) {
+  animation-name: rotateIn;
+}
+
+/* Keyframes */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleDown {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutUp {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateOut {
+  from {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: rotate(-180deg) scale(0.5);
+    opacity: 0;
+  }
+}
+
+@keyframes rotateIn {
+  from {
+    transform: rotate(180deg) scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Reducir movimiento para usuarios con preferencias de accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root),
+  ::view-transition-old(service-image),
+  ::view-transition-new(service-image),
+  ::view-transition-old(service-title),
+  ::view-transition-new(service-title),
+  ::view-transition-old(service-icon),
+  ::view-transition-new(service-icon) {
+    animation: none;
+  }
+}

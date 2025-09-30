@@ -23,13 +23,21 @@ const { service } = Astro.props;
           <div class="row">
             <div class="col-12">
               <div class="section-heading heading-center">
-                <h1>{service.title}</h1>
+                <h1 transition:name={`service-title-${service.id}`}>
+                  {service.title}
+                </h1>
               </div>
               <div class="content">
-                <div class="img-style">
+                <div
+                  class="img-style"
+                  transition:name={`service-image-${service.id}`}
+                >
                   <img src={service.image} alt={service.title} loading="lazy" />
                 </div>
-                <div style="display: flex; justify-content: center; margin: 2rem 0;">
+                <div
+                  transition:name={`service-icon-${service.id}`}
+                  style="display: flex; justify-content: center; margin: 2rem 0;"
+                >
                   <i
                     class="material-icons material-icons-outlined"
                     style="font-size: 4rem; color: var(--primary-color);"

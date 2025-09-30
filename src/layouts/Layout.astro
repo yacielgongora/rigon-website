@@ -1,4 +1,5 @@
 ---
+import { ClientRouter } from "astro:transitions";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 ---
@@ -43,8 +44,12 @@ import Footer from "../components/Footer.astro";
       content="https://rigon.onrender.com/assets/img/sprite.svg#twitter-icon"
     />
     <!-- /SEO ENDS-->
+    <ClientRouter />
     <link rel="stylesheet" href="/assets/css/libs.css" />
     <link rel="stylesheet" href="/assets/css/style.css" />
+    <style is:global>
+      @import "../styles/transitions.css";
+    </style>
     <link
       rel="preload"
       href="/assets/fonts/istok-web-v15-latin/istok-web-v15-latin-regular.woff2"
@@ -101,18 +106,6 @@ import Footer from "../components/Footer.astro";
         <Footer />
       </div>
     </main>
-    <script is:inline src="/assets/libs/jquery/jquery.min.js"></script>
-    <script is:inline src="/assets/libs/lozad/lozad.min.js"></script>
-    <script is:inline src="/assets/libs/device/device.js"></script>
-    <script
-      is:inline
-      src="/assets/libs/ScrollToFixed/jquery-scrolltofixed-min.js"></script>
-    <script is:inline src="/assets/libs/spincrement/jquery.spincrement.min.js"
-    ></script>
-    <script
-      is:inline
-      src="/assets/libs/jquery-validation-1.19.3/jquery.validate.min.js"
-    ></script>
-    <script is:inline src="/assets/js/custom.js"></script>
+    <script is:inline src="/assets/js/app-vanilla.js"></script>
   </body>
 </html>

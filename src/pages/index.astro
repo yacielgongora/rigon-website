@@ -6,156 +6,231 @@ import services from "../data/services.json";
 ---
 
 <Layout title="Home">
-    <div class="main-inner">
-        <!-- Begin intro -->
-        <div class="section-bgc intro">
-            <div class="intro-slider">
-                <div class="intro-item" style="background-image: url(assets/img/intro-img1.jpg)">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col">
-                                <div class="intro-content">
-                                    <div class="section-heading shm-none">
-                                        <h2>Rigon Multiservices<br /></h2>
-                                        <p class="section-desc">
-                                            Somos una empresa con amplio dominio tecnológico, amantes de los desafíos y del desarrollo privado y empresarial...¡¡¡tu mejor asesor tecnológico!!!
-                                        </p>
-                                    </div>
-                                    <div class="wrap-btn intro-btns">
-                                        <a href="/contact" class="btn btn-with-icon btn-border btn-small ripple">
-                                            <span>Contáctanos</span>
-                                            <svg class="btn-icon-right" viewBox="0 0 13 9" width="13" height="9"><use xlink:href="/assets/img/sprite.svg#arrow-right"></use></svg>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+  <div class="main-inner">
+    <!-- Begin intro -->
+    <div class="section-bgc intro">
+      <div class="intro-slider">
+        <div
+          class="intro-item"
+          style="background-image: url(/assets/img/intro-img1.jpg)"
+        >
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <div class="intro-content">
+                  <div class="section-heading shm-none">
+                    <h2>Rigon Multiservices<br /></h2>
+                    <p class="section-desc">
+                      Somos una empresa con amplio dominio tecnológico, amantes
+                      de los desafíos y del desarrollo privado y
+                      empresarial...¡¡¡tu mejor asesor tecnológico!!!
+                    </p>
+                  </div>
+                  <div class="wrap-btn intro-btns">
+                    <a
+                      href="/contact"
+                      class="btn btn-with-icon btn-border btn-small ripple"
+                    >
+                      <span>Contáctanos</span>
+                      <svg
+                        class="btn-icon-right"
+                        viewBox="0 0 13 9"
+                        width="13"
+                        height="9"
+                        ><use xlink:href="/assets/img/sprite.svg#arrow-right"
+                        ></use></svg
+                      >
+                    </a>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-        <!-- End intro -->
-
-        <!-- Begin services -->
-        <section class="section services">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="section-heading heading-center">
-                            <h2>Nuestros Servicios</h2>
-                        </div>
-                    </div>
-                    {services.slice(0, 3).map((item) => <ServiceCard id={item.id} className={item.className} title={item.title} icon={item.icon} description={item.description} />)}
-                    <div class="col-12">
-                        <div class="section-btns justify-content-center">
-                            <a href="/services" class="btn btn-with-icon btn-w240 ripple">
-                                <span>Otros Servicios</span>
-                                <svg class="btn-icon-right" viewBox="0 0 13 9" width="13" height="9"><use xlink:href="/assets/img/sprite.svg#arrow-right"></use></svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End services -->
-
-        <!-- Begin advantages -->
-        <section class="section section-bgc">
-            <div class="container">
-                <div class="row items">
-                    <div class="col-12">
-                        <div class="section-heading heading-center">
-                            <h2>Por qué escogernos?</h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12 item">
-                        <div class="ini">
-                            <div class="ini-count">01</div>
-                            <div class="ini-info">
-                                <h3 class="ini-heading item-heading-large">Hardware de última tecnología</h3>
-                                <div class="ini-desc">
-                                    <p>Usamos hardware de primer nivel para desarrollar las aplicaciones más eficientes y de fácil manejo para los clientes.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12 item">
-                        <div class="ini">
-                            <div class="ini-count">02</div>
-                            <div class="ini-info">
-                                <h3 class="ini-heading item-heading-large">Soporte dedicado 24/7</h3>
-                                <div class="ini-desc">
-                                    <p>Confíe en nuestro soporte técnico, habilitado las 24 horas del día, los 7 días de la semana. Con gusto resolverán cualquier problema que pueda tener.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12 item">
-                        <div class="ini">
-                            <div class="ini-count">03</div>
-                            <div class="ini-info">
-                                <h3 class="ini-heading item-heading-large">Estilo de trabajo ágil y rápido</h3>
-                                <div class="ini-desc">
-                                    <p>Nuestro enfoque en el trabajo ayuda a nuestros especialistas a desarrollar rápidamente mejores productos.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12 item">
-                        <div class="ini">
-                            <div class="ini-count">04</div>
-                            <div class="ini-info">
-                                <h3 class="ini-heading item-heading-large">Precios competitivos</h3>
-                                <div class="ini-desc">
-                                    <p>Nuestra misión es perfeccionar nuestro trabajo, logrando confianza y seguridad con los clientes.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12 item">
-                        <div class="ini">
-                            <div class="ini-count">05</div>
-                            <div class="ini-info">
-                                <h3 class="ini-heading item-heading-large">Alto nivel de usabilidad</h3>
-                                <div class="ini-desc">
-                                    <p>Todos nuestros productos tienen una alta usabilidad, permitiendo a los usuarios operarlos fácilmente.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12 item">
-                        <div class="ini">
-                            <div class="ini-count">06</div>
-                            <div class="ini-info">
-                                <h3 class="ini-heading item-heading-large">Confianza</h3>
-                                <div class="ini-desc">
-                                    <p>Generamos seguridad y confianza en todos nuestro clientes demostrando nuestras capacidades, talentos y profecionalidad.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="section">
-            <div class="container">
-                <div class="row items">
-                    <div class="col-12">
-                        <div class="section-heading heading-center">
-                            <h2>Clientes</h2>
-                            <p class="section-desc">
-                                Nuestros clientes han revolucionado industrias, abierto nuevos mercados y mejorado innumerables vidas. Tenemos el privilegio de trabajar con cientos de empresas con
-                                visión de futuro.
-                            </p>
-                        </div>
-                    </div>
-                    <ClientCard image="assets/img/brands/sentido_comun.png" alt="Sentido Común" />
-                    <ClientCard image="assets/img/brands/rimarrtv.png" alt="Rimarrtv" />
-                    <ClientCard image="assets/img/brands/eva_caribbean.png" alt="Eva Caribbean SRL" />
-                    <ClientCard image="assets/img/brands/alexandre_construction.png" alt="Alexandre Construction" />
-                </div>
-            </div>
-        </section>
-        <!-- End advantages -->
+      </div>
     </div>
+    <!-- End intro -->
+
+    <!-- Begin services -->
+    <section class="section services">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-heading heading-center">
+              <h2>Nuestros Servicios</h2>
+            </div>
+          </div>
+          {
+            services
+              .slice(0, 3)
+              .map((item) => (
+                <ServiceCard
+                  id={item.id}
+                  className={item.className}
+                  title={item.title}
+                  icon={item.icon}
+                  description={item.description}
+                />
+              ))
+          }
+          <div class="col-12">
+            <div class="section-btns justify-content-center">
+              <a href="/services" class="btn btn-with-icon btn-w240 ripple">
+                <span>Otros Servicios</span>
+                <svg
+                  class="btn-icon-right"
+                  viewBox="0 0 13 9"
+                  width="13"
+                  height="9"
+                  ><use xlink:href="/assets/img/sprite.svg#arrow-right"
+                  ></use></svg
+                >
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End services -->
+
+    <!-- Begin advantages -->
+    <section class="section section-bgc">
+      <div class="container">
+        <div class="row items">
+          <div class="col-12">
+            <div class="section-heading heading-center">
+              <h2>Por qué escogernos?</h2>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12 item">
+            <div class="ini">
+              <div class="ini-count">01</div>
+              <div class="ini-info">
+                <h3 class="ini-heading item-heading-large">
+                  Hardware de última tecnología
+                </h3>
+                <div class="ini-desc">
+                  <p>
+                    Usamos hardware de primer nivel para desarrollar las
+                    aplicaciones más eficientes y de fácil manejo para los
+                    clientes.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12 item">
+            <div class="ini">
+              <div class="ini-count">02</div>
+              <div class="ini-info">
+                <h3 class="ini-heading item-heading-large">
+                  Soporte dedicado 24/7
+                </h3>
+                <div class="ini-desc">
+                  <p>
+                    Confíe en nuestro soporte técnico, habilitado las 24 horas
+                    del día, los 7 días de la semana. Con gusto resolverán
+                    cualquier problema que pueda tener.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12 item">
+            <div class="ini">
+              <div class="ini-count">03</div>
+              <div class="ini-info">
+                <h3 class="ini-heading item-heading-large">
+                  Estilo de trabajo ágil y rápido
+                </h3>
+                <div class="ini-desc">
+                  <p>
+                    Nuestro enfoque en el trabajo ayuda a nuestros especialistas
+                    a desarrollar rápidamente mejores productos.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12 item">
+            <div class="ini">
+              <div class="ini-count">04</div>
+              <div class="ini-info">
+                <h3 class="ini-heading item-heading-large">
+                  Precios competitivos
+                </h3>
+                <div class="ini-desc">
+                  <p>
+                    Nuestra misión es perfeccionar nuestro trabajo, logrando
+                    confianza y seguridad con los clientes.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12 item">
+            <div class="ini">
+              <div class="ini-count">05</div>
+              <div class="ini-info">
+                <h3 class="ini-heading item-heading-large">
+                  Alto nivel de usabilidad
+                </h3>
+                <div class="ini-desc">
+                  <p>
+                    Todos nuestros productos tienen una alta usabilidad,
+                    permitiendo a los usuarios operarlos fácilmente.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12 item">
+            <div class="ini">
+              <div class="ini-count">06</div>
+              <div class="ini-info">
+                <h3 class="ini-heading item-heading-large">Confianza</h3>
+                <div class="ini-desc">
+                  <p>
+                    Generamos seguridad y confianza en todos nuestro clientes
+                    demostrando nuestras capacidades, talentos y
+                    profecionalidad.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="row items">
+          <div class="col-12">
+            <div class="section-heading heading-center">
+              <h2>Clientes</h2>
+              <p class="section-desc">
+                Nuestros clientes han revolucionado industrias, abierto nuevos
+                mercados y mejorado innumerables vidas. Tenemos el privilegio de
+                trabajar con cientos de empresas con visión de futuro.
+              </p>
+            </div>
+          </div>
+          <ClientCard
+            image="assets/img/brands/sentido_comun.png"
+            alt="Sentido Común"
+          />
+          <ClientCard image="assets/img/brands/rimarrtv.png" alt="Rimarrtv" />
+          <ClientCard
+            image="assets/img/brands/eva_caribbean.png"
+            alt="Eva Caribbean SRL"
+          />
+          <ClientCard
+            image="assets/img/brands/alexandre_construction.png"
+            alt="Alexandre Construction"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- End advantages -->
+  </div>
 </Layout>

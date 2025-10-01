@@ -6,13 +6,14 @@
 (function () {
   "use strict";
 
+  let scrollHandler = null;
+
   const app = {
     init: function () {
       console.log("App initialized");
       this.mainVisible();
-      this.appendBtnTop();
+      this.setupBtnTop();
       this.setUpListeners();
-      this.btnTopScroll();
     },
 
     setUpListeners: function () {
@@ -40,9 +41,6 @@
       // Close navbar when clicking outside
       document.addEventListener("click", this.headerNavbarNotEl.bind(this));
 
-      // Scroll event for button top (el click ya se asigna en appendBtnTop)
-      window.addEventListener("scroll", this.btnTopScroll);
-
       // Form fields
       const formInputs = document.querySelectorAll(".form-field-input");
       formInputs.forEach((input) => {
@@ -67,39 +65,58 @@
       }
     },
 
-    appendBtnTop: function () {
-      // Solo crear si no existe
-      if (document.querySelector(".btn-top")) return;
+    /**
+     * Setup button to top with proper event handling
+     */
+    setupBtnTop: function () {
+      // Check if button already exists
+      let btnTop = document.querySelector(".btn-top");
 
-      const btnTop = document.createElement("div");
-      btnTop.className = "btn-top";
-      btnTop.innerHTML =
-        '<svg class="btn-icon-right" viewBox="0 0 13 9" width="13" height="9"><use xlink:href="/assets/img/sprite.svg#arrow-right"></use></svg>';
-      document.body.appendChild(btnTop);
-
-      // Agregar evento de clic
-      btnTop.addEventListener("click", this.btnTop);
-    },
-
-    btnTop: function (e) {
-      if (e) {
-        e.preventDefault();
-      }
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    },
-
-    btnTopScroll: function () {
-      const btnTop = document.querySelector(".btn-top");
-      if (!btnTop) return;
-
-      if (window.scrollY > 700) {
-        btnTop.classList.add("active");
+      if (!btnTop) {
+        // Create button if it doesn't exist
+        btnTop = document.createElement("div");
+        btnTop.className = "btn-top";
+        btnTop.innerHTML =
+          '<svg class="btn-icon-right" viewBox="0 0 13 9" width="13" height="9"><use xlink:href="/assets/img/sprite.svg#arrow-right"></use></svg>';
+        document.body.appendChild(btnTop);
       } else {
-        btnTop.classList.remove("active");
+        // If button exists, clone it to remove old listeners
+        const newBtnTop = btnTop.cloneNode(true);
+        btnTop.parentNode.replaceChild(newBtnTop, btnTop);
+        btnTop = newBtnTop;
       }
+
+      // Remove old scroll handler if it exists
+      if (scrollHandler) {
+        window.removeEventListener("scroll", scrollHandler);
+      }
+
+      // Create new scroll handler - use querySelector inside to always get current button
+      scrollHandler = () => {
+        const btn = document.querySelector(".btn-top");
+        if (!btn) return;
+
+        if (window.scrollY > 700) {
+          btn.classList.add("active");
+        } else {
+          btn.classList.remove("active");
+        }
+      };
+
+      // Add scroll event
+      window.addEventListener("scroll", scrollHandler);
+
+      // Handle click event
+      btnTop.addEventListener("click", (e) => {
+        e.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+
+      // Run once to set initial state
+      scrollHandler();
     },
 
     mainMenuToggle: function (e) {

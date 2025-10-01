@@ -5,16 +5,27 @@ import services from "../../data/services.json";
 ---
 
 <Layout title="Services">
-    <div class="section">
-        <div class="container">
-            <div class="row items">
-                <div class="col-12">
-                    <div class="section-heading heading-center">
-                        <h1>Nuestros Servicios</h1>
-                    </div>
-                </div>
-                {services && services.map((item) => <ServiceCard id={item.id} className={item.className} title={item.title} icon={item.icon} description={item.description} />)}
-            </div>
+  <div class="section" transition:animate="fade">
+    <div class="container">
+      <div class="row items">
+        <div class="col-12">
+          <div class="section-heading heading-center">
+            <h1 transition:animate="slide">Nuestros Servicios</h1>
+          </div>
         </div>
+        {
+          services &&
+            services.map((item) => (
+              <ServiceCard
+                id={item.id}
+                className={item.className}
+                title={item.title}
+                icon={item.icon}
+                description={item.description}
+              />
+            ))
+        }
+      </div>
     </div>
+  </div>
 </Layout>

@@ -4,82 +4,132 @@ import constants from "../../utils/constants";
 ---
 
 <Layout title="Contacto">
-    <div class="section">
-        <div class="container">
-            <div class="row content-items">
-                <div class="col-12">
-                    <div class="section-heading">
-                        <div class="section-subheading">siempre estamos en contacto</div>
-                        <h1>Contáctanos</h1>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-5 content-item">
-                    <div class="contact-info section-bgc">
-                        <h3>Datos de contacto</h3>
-                        <ul class="contact-list">
-                            <li>
-                                <i class="material-icons md-22">location_on</i>
-                                <div class="footer-contact-info">
-                                    <a href={constants.GOOGLE_MAP_ADDRESS}> {constants.ADDRESS}</a>
-                                </div>
-                            </li>
-                            <li>
-                                <i class="material-icons md-22 footer-contact-tel">smartphone</i>
-                                <div class="footer-contact-info">
-                                    <a href="tel:+1809-893-7641" class="formingHrefTel">{constants.MOBILE_MAIN}</a>
-                                </div>
-                            </li>
-                            <li>
-                                <i class="material-icons md-22 footer-contact-email">email</i>
-                                <div class="footer-contact-info">
-                                    <a href="mailto:rigon@gmail.com">{constants.EMAIL}</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-xl-8 col-md-7 content-item">
-                    <form action="#!" method="post" class="contact-form contact-form-padding">
-                        <!-- Begin hidden Field for send form -->
-                        <input type="hidden" name="form_subject" value="Contact form" />
-                        <!-- End hidden Field for send form -->
-                        <div class="row gutters-default">
-                            <div class="col-12">
-                                <h3>Ponerse en contacto</h3>
-                            </div>
-                            <div class="col-xl-4 col-sm-6 col-12">
-                                <div class="form-field">
-                                    <label for="contact-name" class="form-field-label">Nombre</label>
-                                    <input type="text" class="form-field-input" name="ContactName" value="" autocomplete="off" required="required" id="contact-name" />
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-sm-6 col-12">
-                                <div class="form-field">
-                                    <label for="contact-phone" class="form-field-label">Teléfono</label>
-                                    <input type="tel" class="form-field-input mask-phone" name="ContactPhone" value="" autocomplete="off" required="required" id="contact-phone" />
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-12">
-                                <div class="form-field">
-                                    <label for="contact-email" class="form-field-label">Email</label>
-                                    <input type="email" class="form-field-input" name="ContactEmail" value="" autocomplete="off" required="required" id="contact-email" />
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-field">
-                                    <label for="contact-message" class="form-field-label">Mensaje</label>
-                                    <textarea name="ContactMessage" class="form-field-input" id="contact-message" cols="30" rows="6"></textarea>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-btn">
-                                    <button type="submit" class="btn btn-w240 ripple"><span>Enviar</span></button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+  <div class="section" transition:animate="fade">
+    <div class="container">
+      <div class="row content-items">
+        <div class="col-12">
+          <div class="section-heading">
+            <div class="section-subheading" transition:animate="slide">
+              siempre estamos en contacto
             </div>
+            <h1 transition:animate="slide">Contáctanos</h1>
+          </div>
         </div>
+        <div class="col-xl-4 col-md-5 content-item" transition:animate="slide">
+          <div class="contact-info section-bgc">
+            <h3>Datos de contacto</h3>
+            <ul class="contact-list">
+              <li>
+                <i class="material-icons md-22">location_on</i>
+                <div class="footer-contact-info">
+                  <a href={constants.GOOGLE_MAP_ADDRESS}>
+                    {constants.ADDRESS}</a
+                  >
+                </div>
+              </li>
+              <li>
+                <i class="material-icons md-22 footer-contact-tel">smartphone</i
+                >
+                <div class="footer-contact-info">
+                  <a href="tel:+1809-893-7641" class="formingHrefTel"
+                    >{constants.MOBILE_MAIN}</a
+                  >
+                </div>
+              </li>
+              <li>
+                <i class="material-icons md-22 footer-contact-email">email</i>
+                <div class="footer-contact-info">
+                  <a href="mailto:rigon@gmail.com">{constants.EMAIL}</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xl-8 col-md-7 content-item" transition:animate="slide">
+          <form
+            action="#!"
+            method="post"
+            class="contact-form contact-form-padding"
+          >
+            <!-- Begin hidden Field for send form -->
+            <input type="hidden" name="form_subject" value="Contact form" />
+            <!-- End hidden Field for send form -->
+            <div class="row gutters-default">
+              <div class="col-12">
+                <h3>Ponerse en contacto</h3>
+              </div>
+              <div class="col-xl-4 col-sm-6 col-12">
+                <div class="form-field">
+                  <label for="contact-name" class="form-field-label"
+                    >Nombre</label
+                  >
+                  <input
+                    type="text"
+                    class="form-field-input"
+                    name="ContactName"
+                    value=""
+                    autocomplete="off"
+                    required="required"
+                    id="contact-name"
+                  />
+                </div>
+              </div>
+              <div class="col-xl-4 col-sm-6 col-12">
+                <div class="form-field">
+                  <label for="contact-phone" class="form-field-label"
+                    >Teléfono</label
+                  >
+                  <input
+                    type="tel"
+                    class="form-field-input mask-phone"
+                    name="ContactPhone"
+                    value=""
+                    autocomplete="off"
+                    required="required"
+                    id="contact-phone"
+                  />
+                </div>
+              </div>
+              <div class="col-xl-4 col-12">
+                <div class="form-field">
+                  <label for="contact-email" class="form-field-label"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    class="form-field-input"
+                    name="ContactEmail"
+                    value=""
+                    autocomplete="off"
+                    required="required"
+                    id="contact-email"
+                  />
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-field">
+                  <label for="contact-message" class="form-field-label"
+                    >Mensaje</label
+                  >
+                  <textarea
+                    name="ContactMessage"
+                    class="form-field-input"
+                    id="contact-message"
+                    cols="30"
+                    rows="6"></textarea>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-btn">
+                  <button type="submit" class="btn btn-w240 ripple"
+                    ><span>Enviar</span></button
+                  >
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
+  </div>
 </Layout>

@@ -10,8 +10,8 @@
     init: function () {
       console.log("App initialized");
       this.mainVisible();
-      this.setUpListeners();
       this.appendBtnTop();
+      this.setUpListeners();
       this.btnTopScroll();
     },
 
@@ -40,13 +40,7 @@
       // Close navbar when clicking outside
       document.addEventListener("click", this.headerNavbarNotEl.bind(this));
 
-      // Button top (scroll to top)
-      const btnTop = document.querySelector(".btn-top");
-      if (btnTop) {
-        btnTop.addEventListener("click", this.btnTop);
-      }
-
-      // Scroll event for button top
+      // Scroll event for button top (el click ya se asigna en appendBtnTop)
       window.addEventListener("scroll", this.btnTopScroll);
 
       // Form fields
@@ -74,14 +68,23 @@
     },
 
     appendBtnTop: function () {
+      // Solo crear si no existe
+      if (document.querySelector(".btn-top")) return;
+
       const btnTop = document.createElement("div");
       btnTop.className = "btn-top";
       btnTop.innerHTML =
         '<svg class="btn-icon-right" viewBox="0 0 13 9" width="13" height="9"><use xlink:href="/assets/img/sprite.svg#arrow-right"></use></svg>';
       document.body.appendChild(btnTop);
+
+      // Agregar evento de clic
+      btnTop.addEventListener("click", this.btnTop);
     },
 
-    btnTop: function () {
+    btnTop: function (e) {
+      if (e) {
+        e.preventDefault();
+      }
       window.scrollTo({
         top: 0,
         behavior: "smooth",
